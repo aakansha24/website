@@ -8182,4 +8182,156 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important;
 }
+
+/* login and sign up detail*/
+.image{
+    opacity: 0.5;
+    position: absolute;
+    right: 70px;
+    top: 24px;
+    display: block;
+    width:150px;
+    z-index: 0;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+ 
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+ 
+body {
+    background-color: #f3f3f3;
+    color: rgb(165,165,165);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+ 
+a.close {
+    background-color: rgb(204,204,204);
+    border-radius: 50%;
+    color: rgb(255,255,255);
+    display: block;
+    font-family: 'Varela Round', sans-serif;
+    font-size: .8em;
+    padding: .2em .5em;
+    position: absolute;
+    top: 1.25rem;
+    transition: all 400ms ease;
+    right: 1.25rem;
+    z-index: 9999
+}
+     
+    a.close:hover {
+        background-color: #0C7F99;
+        cursor: pointer;
+    }
+ 
+
+div.overlay {
+    background-color: rgba(0,0,0,.25);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+}
+ 
+    div.overlay > div.login-wrapper {
+        align-self: center;
+        background-color: #ffffff;
+        border-radius: 7px;
+        padding: 6px;
+        width: 450px;
+    }
+     
+        div.overlay > div.login-wrapper > div.login-content {
+            background-color: rgb(255,255,255);
+            border-radius: 2px;
+            padding: 24px;    
+            position: relative;
+        }
+         
+            div.overlay > div.login-wrapper > div.login-content > h3 {
+                color: rgb(0,0,0);
+                font-family: 'Varela Round', sans-serif;
+                font-size: 1.8em;
+                margin: 0 0 1.25em;
+                padding: 0;
+            }
+
+form label {
+    color: rgb(0,0,0);
+    display: block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.25em;
+    margin: .75em 0;    
+}
+ 
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form input[type="search"],
+    form input[type="password"],
+    form textarea {
+        background-color: rgb(255,255,255);
+        border: 1px solid rgb( 186, 186, 186 );
+        border-radius: 5px;
+        display: block;
+        font-size: .65em;
+        margin: 10px 0 13px 0;
+        padding: .8em .55em;    
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+        transition: all 400ms ease;
+        width: 95%;
+    }
+     
+    form input[type="text"]:focus:active,
+    form input[type="email"]:focus:active,
+    form input[type="number"]:focus:active,
+    form input[type="password"]:focus:active,
+    form textarea:focus,
+    form select:focus { 
+        border-color: #04CF29;
+    }
+     
+     
+form button {
+    margin-left:45px;
+    background-color: #0C7F99;
+    border: 1px solid #0C7F99;
+    border-radius: 5px;
+    color: rgb(255,255,255);
+    font-family: 'Varela Round', sans-serif;
+    font-size: .85em;
+    padding-left:120px;
+    padding-right: 130px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 300px;
+    height: 40px;
+    transition: all 400ms ease;    
+}
+ 
+    form button:hover {
+        background-color: #085566;
+        cursor: pointer;
+    }
+
 /*# sourceMappingURL=bootstrap.css.map */
