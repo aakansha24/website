@@ -9,3 +9,34 @@
     margin: 0;
     border-radius: 0;
 }
+
+.btn-success {
+	border-radius: 0;
+	background: transparent;
+}
+
+.login-button {
+	border-radius: 0;
+	background: transparent;
+	color: rgb(15, 85, 101);
+}
+
+.login-button:hover {
+	color: white;
+}
+
+.main-button {
+	border-radius: 0; background-color: transparent; color: rgb(48, 166, 74);
+}
+
+#student-button, #teacher-button, #parent-button {
+	border-radius: 0; 
+	background-color: transparent; 
+	color: rgb(48, 166, 74);
+	margin: 10px;
+}
+
+#student-button:hover, #teacher-button:hover, #parent-button:hover {
+	background-color: rgb(48, 166, 74); 
+	color: white;
+}

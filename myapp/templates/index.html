@@ -5,6 +5,8 @@
 </head>
 <link rel="stylesheet" type="text/css" href="../static/style.css" />
 <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../static/boostrap.js"></script>
 <body>
 	<!-- Main jumbotron -->
     <div class="jumbotron" id="header">
@@ -16,16 +18,16 @@
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p><a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button">Students... here &raquo;</a>
-        <a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button">Teachers... here &raquo;</a>
-        <a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button">Parents... here &raquo;</a></p>
+        <p><a class="main-button btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button" id="student-button">Students... here &raquo;</a>
+        <a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button" id="teacher-button">Teachers... here &raquo;</a>
+        <a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button" id="parent-button">Parents... here &raquo;</a></p>
       </div>
     </div>
 
     <!-- Navbar -->
 	<nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -55,8 +57,8 @@
         </form>
       </div>
     </nav>
+
 	 <!--Login details(pop-up window)-->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 $(document).ready(function() {
     $("#loginLink").click(function( event ){
@@ -87,26 +89,34 @@ $(document).ready(function() {
 </script>
 </script>
 <div class="overlay" style="display: none;">
-    <div class="login-wrapper">
+    <div class="login-wrapper" style="border-radius: 0;">
         <div class="login-content" id="loginTarget">
             <a class="close">x</a>
-            <h3>Sign in</h3><img class="image" src="static/tsrs.png">
+            <h3 class="display-4">Sign in</h3>
+<!--             <img class="image" src="static/tsrs.png"> -->
             <form method="post" action="login.php">
                 <label for="username">
-                    <font face="Arial">Username</font>
-                    <input type="text" name="username" id="username" placeholder="Username"/>
+                    <!-- <h4 class="display-5">Username</h4> -->
+                    <input type="text" name="username" id="username" placeholder="Username" style="border-radius: 0;" />
                 </label>
                 <label for="password">
-                    <font face="Arial">Password</font>
-                    <input type="password" name="password" id="password" placeholder="Password"/>
+                    <!-- <h4 class="display-5">Password</h4> -->
+                    <input type="password" name="password" id="password" placeholder="Password" style="border-radius: 0;" />
                 </label>
-                <button type="submit">Sign in</button>
+                <button type="submit" class="login-button">Sign in</button>
             </form>
             <br>
             <a href="#"><center><font size=2>Forgot Password?</font></center></a>
         </div>
     </div>
 </div>
->>>>>>> 9adc81ed5ddfc1687cb8514e015576e45dabffd7
+
+<!-- CIE Secondary  -->
+<div class="container">
+  <div>
+    
+  </div>
+</div>
+
 </body>
 </html>
