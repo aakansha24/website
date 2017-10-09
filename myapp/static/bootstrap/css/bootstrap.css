@@ -8221,12 +8221,12 @@ body {
 }
  
 a.close {
-    background-color: rgb(204,204,204);
+    background-color: white;
     border-radius: 50%;
     color: rgb(255,255,255);
     display: block;
-    font-family: 'Varela Round', sans-serif;
-    font-size: .8em;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1em;
     padding: .2em .5em;
     position: absolute;
     top: 1.25rem;
@@ -8236,7 +8236,7 @@ a.close {
 }
      
     a.close:hover {
-        background-color: #0C7F99;
+        background-color: #333;
         cursor: pointer;
     }
  
