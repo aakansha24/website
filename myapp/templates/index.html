@@ -5,8 +5,72 @@
 </head>
 <link rel="stylesheet" type="text/css" href="../static/style.css" />
 <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css" />
+
+<style>
+/* resource center stuff: needs editing*/
+.box {
+  background: #ffffff;
+  color: #000000;
+  width: 700px;
+  height: 900px;
+  padding: 60px;
+  margin: 1em auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:black;
+
+}
+.header {
+  font: bold 18px/1.5em sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+p {
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+.hide{
+  display:none;
+}
+
+div.sections {
+    left:0px;
+    top:0px;
+    width: 320px;
+    padding: 10px;
+    border: 2px solid #04CF29;
+    border-radius: 0px;
+    margin-bottom: 10px;;
+}
+
+
+div.section1 {
+    left:0px;
+    width: 320px;
+    padding: 10px;
+    border: 2px solid #04CF29;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    margin-top:25px;
+}
+
+
+a{
+  color:black;
+}
+
+a:hover{
+  color:black;
+  text-decoration: none;
+}
+/* end of resource center */
+</style>
 <body>
-	<!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,7 +96,7 @@
     </div>
   </nav>
 
-	<!-- Main jumbotron -->
+  <!-- Main jumbotron -->
     <div class="jumbotron" id="header">
       <div class="container">
         <h1 class="display-3">Hello, world!</h1>
@@ -49,7 +113,7 @@
     </div>
 
     
-	 <!--Login details(pop-up window)-->
+   <!--Login details(pop-up window)-->
 <script>
 $(document).ready(function() {
     $("#loginLink").click(function( event ){
@@ -112,10 +176,126 @@ $(document).ready(function() {
   </div>
 </div>
 
+<!-- Resource Center: pop-up window when link on home page clicked -->
+<div class="content">
+      <div class="box">
+        <center><font size=10>Resource Center</font>
+          <br><h5>Access to past papers, websites and other resources</h5></center>
+          <!--main code of dropdown
+ /* $(document).on('change', '.div-toggle', function() {
+  var target = $(this).data('target');
+  var show = $("option:selected", this).data('show');
+  $(target).children().addClass('hide');
+  $(show).removeClass('hide');
+});
+$(document).ready(function(){
+  $('.div-toggle').trigger('change');
+});
 
-<!-- Scripts start here -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="../static/bootstrap/js/bootstrap.js"></script>
+Incase you want it to be a dropdown menu:
+<center><select class="div-toggle" data-target=".course">
+  <option data-group='SHOW' value='0' data-show='.none'>Choose your course</option>
+  <option value="CIES" data-show=".cies">Cambridge Secondary </option>
+  <option value="IGCSE" data-show=".igcse">IGCSE</option>
+  <option value="IB" data-show=".ib">IB</option>
+  <option value="ICSE" data-show=".icse">ICSE</option>
+</select>
+</center>
+
+<div class="course">
+  <div class="igcse hide section1">English Literature and Language</div>
+  <div class="igcse hide sections">Mathematics</div>
+  <div class="igcse hide sections">Sciences</div>
+  <div class="igcse hide sections">Humanities and Social Sciences</div>
+  <div class="igcse hide sections">Languages</div>
+  <div class="igcse hide sections">Arts</div>
+</div>
+
+<div class="course">
+  <div class="ib hide section1">Language and Literature</div>
+  <div class="ib hide sections">Mathematics</div>
+  <div class="ib hide sections">Sciences</div>
+  <div class="ib hide sections">Individuals and Societies</div>
+  <div class="ib hide sections">Language Acquisition</div>
+  <div class="ib hide sections">Arts</div>
+</div>
+      </div>      
+    </div>
+-->
+<script>
+//click on and off
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  function show (toBlock){
+    setDisplay(toBlock, 'block');
+  }
+  function hide (toNone) {
+    setDisplay(toNone, 'none');
+  }
+  function setDisplay (target, str) {
+    document.getElementById(target).style.display = str;
+  }
+
+</script>
+<!--IGCSE-->
+<img id="clickig" onclick="show('course');" src="static/igcse.jpg" width=150 height=100>
+  <div id="course" style="display:none; margin-left:25%">
+  <a href="#"><div class="section1">English Literature and Language</a></div>
+  <a href="#"><div class="sections">Mathematics</a></div>
+  <a href="#"><div class="sections">Sciences</a></div>
+  <a href="#"><div class="sections">Humanities and Social Sciences</a></div>
+  <a href="#"><div class="sections">Languages</a></div>
+  <a href="#"><div class="sections">Arts</a></div>
+</div>
+<!--IB-->
+<img id="clickib" onclick="show('courseib'); //hide('clickib'); hide('clickig');" src="static/ib.png" width=200 height=80>
+<center>
+  <div id="courseib" style="display:none; margin-left:25%">
+ <a href="#"> <div class="section1">Language and Literature</a></div>
+  <a href="#"><div class="sections">Mathematics</a></div>
+  <a href="#"><div class="sections">Sciences</a></div>
+  <a href="#"><div class="sections">Individuals and Societies</a></div>
+  <a href="#"><div class="sections">Language Acquisition</a></div>
+ <a href="#"> <div class="sections">Arts</a></div>
+</div>
+<!--Cambridge Secondary: ask ma'am for subject groups-->
+<img id="clickcies" onclick="show('coursecies');" src="static/cies.jpg" width=100 height=100>
+  <a href="#"><div id="course" style="display:none; margin-left:25%">
+ <a href="#"> <div class="section1">English Literature and Language</a></div>
+  <a href="#"><div class="sections">Mathematics</a></div>
+  <a href="#"><div class="sections">Sciences</a></div>
+  <a href="#"><div class="sections">Humanities and Social Sciences</a></div>
+  <a href="#"><div class="sections">Languages</a></div>
+ <a href="#"> <div class="sections">Arts</a></div>
+</div>
+
+<!--ICSE: under construction note-->
+<img id="clickcies" onclick="show('coursecies');" src="static/icse.jpg" width=120 height=100>
+  <div id="course" style="display:none; margin-left:25%">
+  <div class="section1"><a href="#"></a></div>
+  <div class="sections"><a href="#"></a></div>
+  <div class="sections"><a href="#"></a></div>
+  <div class="sections"><a href="#"></a></div>
+  <div class="sections"><a href="#"></a></div>
+  <div class="sections"><a href="#"></a></div>
+</div>
+
 
 </body>
 </html>
