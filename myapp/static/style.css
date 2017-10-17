@@ -103,7 +103,7 @@ a:hover{
 }
 /* end of resource center */
 
-#secondary {
+#secondary > div > div.col-md-4.col-sm-12 > h3{
 	margin-top: 20px;
 }
 
@@ -111,9 +111,11 @@ a:hover{
 	margin-bottom: 10px;
 	margin-top: 10px;
 	text-align: center;
+	
 }
 
-#secondary > h1:nth-child(2) {
+
+#secondary > div > div.col-md-8.col-sm-12 > h3 {
 	margin-top: 20px;
 }
 
