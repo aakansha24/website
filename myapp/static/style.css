@@ -103,5 +103,18 @@ a:hover{
 }
 /* end of resource center */
 
+#secondary {
+	margin-top: 20px;
+}
+
+.subjects {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#secondary > h1:nth-child(2) {
+	margin-top: 20px;
+}
 
 
