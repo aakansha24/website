@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website test</title>
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+ 
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+ 
+body {
+    background-color: #f3f3f3;
+    color: rgb(165,165,165);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+ 
+a.close {
+    background-color: white;
+    border-radius: 50%;
+    color: rgb(255,255,255);
+    display: block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    padding: .2em .5em;
+    position: absolute;
+    top: 1.25rem;
+    transition: all 400ms ease;
+    right: 1.25rem;
+    z-index: 9999
+}
+     
+    a.close:hover {
+        background-color: #333;
+        cursor: pointer;
+    }
+ 
+
+div.overlay {
+    background-color: rgba(0,0,0,.25);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+}
+ 
+    div.overlay > div.login-wrapper {
+        align-self: center;
+        background-color: #ffffff;
+        border-radius: 7px;
+        padding: 6px;
+        width: 450px;
+    }
+     
+        div.overlay > div.login-wrapper > div.login-content {
+            background-color: rgb(255,255,255);
+            border-radius: 2px;
+            padding: 24px;    
+            position: relative;
+        }
+         
+            div.overlay > div.login-wrapper > div.login-content > h3 {
+                color: rgb(0,0,0);
+                font-family: 'Varela Round', sans-serif;
+                font-size: 1.8em;
+                margin: 0 0 1.25em;
+                padding: 0;
+            }
+
+form label {
+    color: rgb(0,0,0);
+    display: block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.25em;
+    margin: .75em 0;    
+}
+ 
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form input[type="search"],
+    form input[type="password"],
+    form textarea {
+        background-color: rgb(255,255,255);
+        border: 1px solid rgb( 186, 186, 186 );
+        border-radius: 5px;
+        display: block;
+        font-size: .65em;
+        margin: 10px 0 13px 0;
+        padding: .8em .55em;    
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+        transition: all 400ms ease;
+        width: 95%;
+    }
+     
+    form input[type="text"]:focus:active,
+    form input[type="email"]:focus:active,
+    form input[type="number"]:focus:active,
+    form input[type="password"]:focus:active,
+    form textarea:focus,
+    form select:focus { 
+        border-color: #04CF29;
+    }
+     
+     
+form button {
+    margin-left:45px;
+    background-color: #0C7F99;
+    border: 1px solid #0C7F99;
+    border-radius: 5px;
+    color: rgb(255,255,255);
+    font-family: 'Varela Round', sans-serif;
+    font-size: .85em;
+    padding-left:120px;
+    padding-right: 130px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 300px;
+    height: 40px;
+    transition: all 400ms ease;    
+}
+ 
+    form button:hover {
+        background-color: #085566;
+        cursor: pointer;
+    }
+</style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Main jumbotron -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#loginLink").click(function( event ){
+           event.preventDefault();
+           $(".overlay").fadeToggle("fast");
+     });
+     
+    $(".overlayLink").click(function(event){
+        event.preventDefault();
+        var action = $(this).attr('data-action');
+         
+        $("#loginTarget").load("ajax/" + action);
+         
+        $(".overlay").fadeToggle("fast");
+    });
+     
+    $(".close").click(function(){
+        $(".overlay").fadeToggle("fast");
+    });
+     
+    $(document).keyup(function(e) {
+        if(e.keyCode == 27 && $(".overlay").css("display") != "none" ) { 
+            event.preventDefault();
+            $(".overlay").fadeToggle("fast");
+        }
+    });
+});
+</script>
+
+<div class="overlay" style="display: none;">
+    <div class="login-wrapper" style="border-radius: 0;">
+        <div class="login-content" id="loginTarget">
+            <a class="close">X</a>
+            <h3 class="display-4">Sign in</h3>
+
+            <form method="post" action="login.php">
+                <label for="username">
+                    <!--Username-->
+                    <input type="text" name="username" id="username" placeholder="Username" style="border-radius: 0;" />
+                </label>
+
+                <label for="password">
+                  <!--Password-->
+                    <input type="password" name="password" id="password" placeholder="Password" style="border-radius: 0;" />
+                </label>
+                <button type="submit" class="login-button">Sign in</button>
+            </form>
+            <br>
+            <a href="#"><center><font size=2>Forgot Password?</font></center></a>
+        </div>
+    </div>
+</div>
+
+    <div class="jumbotron" id="header">
+      <div class="container">
+        <h1 class="display-3">Hello, world!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p><a class="main-button btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button" id="student-button">Students... here &raquo;</a>
+        <a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button" id="teacher-button">Teachers... here &raquo;</a>
+        <a class="btn btn-success btn-lg overlayLink" href="login.php" data-action="login-form.html" role="button" id="parent-button">Parents... here &raquo;</a></p>
+      </div>
+    </div>
+
+    
+   <!--Login details(pop-up window)-->
+
+<!-- CIE Secondary  -->
+<div class="container" id="secondary">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <h3 class="foo" style="text-align: center;">Cambridge Upper Secondary</h1>
+      <hr class="colored">
+      <img class="mx-auto d-block" src="../static/cies.jpg" height="200px" width="200px;">
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <h3 class="foo" style="text-align: center;">Subjects offered</h1>
+        <div class="row">
+          <div class="col-sm-4 subjects">
+           <a href="#">English Language</a>
+          </div>
+          <div class="col-sm-4 subjects">
+            <a href="#">Mathematics</a>
+          </div>
+          <div class="col-sm-4 subjects">
+            <a href="#">Science</a>
+          </div>
+          <div class="col-sm-4 subjects">
+            <a href="#">Geography</a>
+          </div>
+          <div class="col-sm-4 subjects">
+            <a href="#">History</a>
+          </div>
+          <div class="col-sm-4 subjects">
+            <a href="#">Enterprise</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--SCRIPTS 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> 
+-->
+</body>
+</html>
