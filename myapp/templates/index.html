@@ -3,8 +3,8 @@
 <head>
 <title>Website test</title>
   <link rel="stylesheet" type="text/css" href="../static/style.css" />
-  <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css" />
-  <script type="text/javascript" href="../static/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
 </head>
 <body>
   <!-- Navbar -->
@@ -79,20 +79,19 @@ $(document).ready(function() {
     });
 });
 </script>
-</script>
+
 <div class="overlay" style="display: none;">
     <div class="login-wrapper" style="border-radius: 0;">
         <div class="login-content" id="loginTarget">
             <a class="close">X</a>
             <h3 class="display-4">Sign in</h3>
-<!--             <img class="image" src="static/tsrs.png"> -->
+
             <form method="post" action="login.php">
                 <label for="username">
-                    <!-- <h4 class="display-5">Username</h4> -->
+
                     <input type="text" name="username" id="username" placeholder="Username" style="border-radius: 0;" />
                 </label>
                 <label for="password">
-                    <!-- <h4 class="display-5">Password</h4> -->
                     <input type="password" name="password" id="password" placeholder="Password" style="border-radius: 0;" />
                 </label>
                 <button type="submit" class="login-button">Sign in</button>
@@ -115,128 +114,14 @@ $(document).ready(function() {
 
 
 
-<!-- OLD WAY -->
-<!-- Resource Center: pop-up window when link on home page clicked -->
-<!-- <div class="content">
-      <div class="box">
-        <center><font size=10>Resource Center</font>
-          <br><h5>Access to past papers, websites and other resources</h5></center> -->
-          <!--main code of dropdown
- /* $(document).on('change', '.div-toggle', function() {
-  var target = $(this).data('target');
-  var show = $("option:selected", this).data('show');
-  $(target).children().addClass('hide');
-  $(show).removeClass('hide');
-});
-$(document).ready(function(){
-  $('.div-toggle').trigger('change');
-});
-
-Incase you want it to be a dropdown menu:
-<center><select class="div-toggle" data-target=".course">
-  <option data-group='SHOW' value='0' data-show='.none'>Choose your course</option>
-  <option value="CIES" data-show=".cies">Cambridge Secondary </option>
-  <option value="IGCSE" data-show=".igcse">IGCSE</option>
-  <option value="IB" data-show=".ib">IB</option>
-  <option value="ICSE" data-show=".icse">ICSE</option>
-</select>
-</center>
-
-<div class="course">
-  <div class="igcse hide section1">English Literature and Language</div>
-  <div class="igcse hide sections">Mathematics</div>
-  <div class="igcse hide sections">Sciences</div>
-  <div class="igcse hide sections">Humanities and Social Sciences</div>
-  <div class="igcse hide sections">Languages</div>
-  <div class="igcse hide sections">Arts</div>
-</div>
-
-<div class="course">
-  <div class="ib hide section1">Language and Literature</div>
-  <div class="ib hide sections">Mathematics</div>
-  <div class="ib hide sections">Sciences</div>
-  <div class="ib hide sections">Individuals and Societies</div>
-  <div class="ib hide sections">Language Acquisition</div>
-  <div class="ib hide sections">Arts</div>
-</div>
-      </div>      
-    </div>
--->
-<script>
-//click on and off
-// function myFunction() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-// }
-
-// window.onclick = function(event) {
-//   if (!event.target.matches('.dropbtn')) {
-
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains('show')) {
-//         openDropdown.classList.remove('show');
-//       }
-//     }
-//   }
-// }
-
-//   function show (toBlock){
-//     setDisplay(toBlock, 'block');
-//   }
-//   function hide (toNone) {
-//     setDisplay(toNone, 'none');
-//   }
-//   function setDisplay (target, str) {
-//     document.getElementById(target).style.display = str;
-//   }
-
-</script>
-<!--IGCSE-->
-<!-- <img id="clickig" onclick="show('course');" src="static/igcse.jpg" width=150 height=100>
-  <div id="course" style="display:none; margin-left:25%">
-  <a href="#"><div class="section1">English Literature and Language</a></div>
-  <a href="#"><div class="sections">Mathematics</a></div>
-  <a href="#"><div class="sections">Sciences</a></div>
-  <a href="#"><div class="sections">Humanities and Social Sciences</a></div>
-  <a href="#"><div class="sections">Languages</a></div>
-  <a href="#"><div class="sections">Arts</a></div>
-</div> -->
-<!--IB-->
-<!-- <img id="clickib" onclick="show('courseib'); 
-hide('clickib'); hide('clickig');" src="static/ib.png" width=200 height=80> -->
-<!-- <center>
-  <div id="courseib" style="display:none; margin-left:25%">
- <a href="#"> <div class="section1">Language and Literature</a></div>
-  <a href="#"><div class="sections">Mathematics</a></div>
-  <a href="#"><div class="sections">Sciences</a></div>
-  <a href="#"><div class="sections">Individuals and Societies</a></div>
-  <a href="#"><div class="sections">Language Acquisition</a></div>
- <a href="#"> <div class="sections">Arts</a></div>
-</div> -->
-<!--Cambridge Secondary: ask ma'am for subject groups-->
-<!-- <img id="clickcies" onclick="show('coursecies');" src="static/cies.jpg" width=100 height=100>
-  <a href="#"><div id="course" style="display:none; margin-left:25%">
- <a href="#"> <div class="section1">English Literature and Language</a></div>
-  <a href="#"><div class="sections">Mathematics</a></div>
-  <a href="#"><div class="sections">Sciences</a></div>
-  <a href="#"><div class="sections">Humanities and Social Sciences</a></div>
-  <a href="#"><div class="sections">Languages</a></div>
- <a href="#"> <div class="sections">Arts</a></div>
-</div> -->
-
-<!--ICSE: under construction note-->
-<!-- <img id="clickcies" onclick="show('coursecies');" src="static/icse.jpg" width=120 height=100>
-  <div id="course" style="display:none; margin-left:25%">
-  <div class="section1"><a href="#"></a></div>
-  <div class="sections"><a href="#"></a></div>
-  <div class="sections"><a href="#"></a></div>
-  <div class="sections"><a href="#"></a></div>
-  <div class="sections"><a href="#"></a></div>
-  <div class="sections"><a href="#"></a></div>
-</div> -->
 
 
+
+
+
+<!-- SCRIPTS  -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>
