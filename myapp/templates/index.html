@@ -5,32 +5,222 @@
 <link rel="stylesheet" type="text/css" href="../static/style.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<style>
+
+/* headers */
+th a{
+  color:black;
+  text-decoration: none;
+}
+.head-cies a:hover{
+  color:rgb(89, 167, 75);
+  text-decoration: none;
+}
+
+.head-igcse a:hover{
+  color:rgb(242, 123, 48);
+  text-decoration: none;
+}
+.head-ib a:hover{
+  color:rgb(44, 184, 232);
+  text-decoration: none;
+}
+.head-icse a:hover{
+  color:rgb(245, 196, 45);
+  text-decoration: none;
+}
+
+.heads{
+  text-align:left;
+}
+/* end headers */
+/* Cambridge Secondary */
+.cies a{
+    color:rgb(89, 167, 75);
+    padding-bottom: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.cies1 a{
+    color:rgb(89, 167, 75);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.cies a:hover{
+    color:rgb(89, 167, 75);
+    padding-bottom: 8px;
+    text-decoration: underline;
+    display: block;
+}
+
+.cies1 a:hover{
+    color:rgb(89, 167, 75);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: underline;
+    display: block;
+}
+/* End Cambridge Secondary */
+/* IGCSE */
+.igcse a{
+    color:rgb(242, 123, 48);
+    padding-bottom: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.igcse1 a{
+    color:rgb(242, 123, 48);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.igcse a:hover{
+    color:rgb(242, 123, 48);
+    padding-bottom: 8px;
+    text-decoration: underline;
+    display: block;
+}
+
+.igcse1 a:hover{
+    color:rgb(242, 123, 48);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: underline;
+    display: block;
+}
+/* End IGCSE */
+/* IB */
+.ib a{
+    color:rgb(44, 184, 232);
+    padding-bottom: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.ib1 a{
+    color:rgb(44, 184, 232);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.ib a:hover{
+    color:rgb(44, 184, 232);
+    padding-bottom: 8px;
+    text-decoration: underline;
+    display: block;
+}
+
+.ib1 a:hover{
+    color:rgb(44, 184, 232);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: underline;
+    display: block;
+}
+/* End IB */
+/* ICSE */
+.icse a{
+    color:rgb(245, 196, 45);
+    padding-bottom: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.icse1 a{
+    color:rgb(245, 196, 45);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.icse a:hover{
+    color:rgb(245, 196, 45);
+    padding-bottom: 8px;
+    text-decoration: underline;
+    display: block;
+}
+
+.icse1 a:hover{
+    color:rgb(245, 196, 45);
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: underline;
+    display: block;
+}
+/* End ICSE */
+
+</style>
+</style>
 </head>
+
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color:#fcfcfc;">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+      <form class="navbar-brand form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search"> 
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
+
+  <table style="width:100%; font-family: -apple-system, BlinkMacSystemFont, sans-serif;" align="center">
+  <tr class="heads">
+    <th class="head-cies"><a href="#">Cambridge Secondary</a></th>
+    <th class="head-igcse"><a href="#">IGCSE</a></th> 
+    <th class="head-ib"><a href="#">IB</a></th>
+    <th class="head-icse"><a href="#">ICSE</a></th>
+  </tr>
+  <tr>
+    <td class="cies1"><a href="#">English Language</a></td>
+    <td class="igcse1"><a href="#">English Language and Literature</a></td>
+    <td class="ib1"><a href="#">Studies in Language and Literature</a></td>
+    <td class="icse1"><a href="#">English Language</a></td>
+  </tr>
+  <tr>
+    <td class="cies"><a href="#">Mathematics</a></td>
+    <td class="igcse"><a href="#">Mathematics</a></td>
+    <td class="ib"><a href="#">Language Acquisition</a></td>
+    <td class="icse"><a href="#">Mathematics</a></td>
+  </tr>
+  <tr>
+    <td class="cies"><a href="#">Sciences</a></td>
+    <td class="igcse"><a href="#">Sciences</a></td>
+    <td class="ib"><a href="#">Sciences</a></td>
+    <td class="icse"><a href="#">Sciences</a></td>
+  </tr>
+  <tr>
+    <td class="cies"><a href="#">Geography</a></td>
+    <td class="igcse"><a href="#">Humanities and Social Sciences</a></td>
+    <td class="ib"><a href="#">Individuals and Societies</a></td>
+    <td class="icse"><a href="#">Geography</a></td>
+  </tr>
+  <tr>
+    <td class="cies"><a href="#">History</a></td>
+    <td class="igcse"><a href="#">Languages</a></td>
+    <td class="ib"><a href="#">Mathematics</a></td>
+    <td class="icse"><a href="#">History</a></td>
+  </tr>
+    <tr>
+    <td class="cies"><a href="#">Enterprise</a></td>
+    <td class="igcse"><a href="#">Arts</a></td>
+    <td class="ib"><a href="#">Arts</a></td>
+    <td class="icse"><a href="#">Enterprise</a></td>
+  </tr>
+</table>
   </nav>
 
   <!-- Main jumbotron -->
